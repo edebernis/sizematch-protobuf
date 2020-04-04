@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package sizematch.items;
+
+option go_package = "github.com/golang/protobuf/sizematch/items";
+
+
+message Item {
+  string id = 1;
+  string source = 2;
+  string lang = 3;
+  repeated string urls = 4;
+  string name = 5;
+  string description = 6;
+  repeated string categories = 7;
+  repeated string image_urls = 8;
+  map<string, string> dimensions = 9;
+  uint64 price = 10;
+  string price_currency = 11;
+}
+
+
+message NormalizedItem {
+  string id = 1;
+  string source = 2;
+  enum Lang {
+    EN = 0;
+    FR = 1;
+  }
+  Lang lang = 3;
+  repeated string urls = 4;
+  string name = 5;
+  string description = 6;
+  repeated string categories = 7;
+  repeated string image_urls = 8;
+  Dimensions dimensions = 9;
+  Price price = 10;
+}
+
+
+message Dimensions {
+  uint64 height = 1;
+  uint64 width = 2;
+  uint64 depth = 3;
+}
+
+
+message Price {
+  uint64 price = 1;
+  enum Currency {
+    EUR = 0;
+    GBP = 1;
+  }
+  Currency currency = 2;
+}
