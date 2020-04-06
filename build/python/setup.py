@@ -6,6 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sizematch-protobuf",
+    version="0.0.1",
     packages=find_packages(),
     description="Sizematch protobuf libraries",
     author="Emeric de Bernis",
