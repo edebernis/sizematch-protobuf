@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package sizematch.protobuf.items;
 
-option go_package = "github.com/golang/protobuf/sizematch/items";
-
 
 message Item {
   string id = 1;
