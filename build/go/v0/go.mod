@@ -1,4 +1,3 @@
-module github.com/edebernis/sizematch-protobuf/build/go/v0
+module github.com/edebernis/sizematch-protobuf
 
 go 1.13
-
