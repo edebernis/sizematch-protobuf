@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package sizematch.protobuf.items;
 
+option go_package = "items";
+
 
 message Item {
   string id = 1;
