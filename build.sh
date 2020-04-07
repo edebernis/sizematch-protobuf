@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ -z "$1" ]
+  then
+    echo "No version supplied"
+fi
+
 VERSION=$1
 PROTOC="${PROTOCBIN:-protoc}"
 GITPKG="${GITPKGBIN:-gitpkg}"
