@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package sizematch.protobuf.items;
 
-option go_package = "items";
+option go_package = "items.pb";
 
 
 message Item {

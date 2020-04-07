@@ -15,5 +15,5 @@ $PROTOC -I=defs --js_out=import_style=commonjs,binary:build/js defs/*.proto
 
 # GO
 $PROTOC -I=defs --go_out=build/go defs/*.proto
-git tag build/go/$VERSION
-git push origin build/go/$VERSION
+git tag build/go/v$VERSION
+git push origin build/go/v$VERSION
