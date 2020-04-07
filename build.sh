@@ -7,20 +7,24 @@ if [ -z "$1" ]
 fi
 
 VERSION=$1
+
 GIT="${GITBIN:-git}"
 PROTOC="${PROTOCBIN:-protoc}"
 GITPKG="${GITPKGBIN:-gitpkg}"
 
+SRC_DIR="defs"
+DST_DIR="build"
+
 # Python
-$PROTOC -I=defs --python_out=build/python/sizematch/protobuf defs/*/*.proto
+$PROTOC -I=SRC_DIR --python_out=$DST_DIR/python/sizematch/protobuf SRC_DIR/*/*.proto
 $GIT tag $VERSION
 $GIT push origin $VERSION
 
 # JS
-$PROTOC -I=defs --js_out=import_style=commonjs,binary:build/js defs/*/*.proto
-( cd build/js && $GITPKG publish )
+$PROTOC -I=SRC_DIR --js_out=import_style=commonjs,binary:$DST_DIR/js SRC_DIR/*/*.proto
+( cd $DST_DIR/js && $GITPKG publish )
 
 # GO
-$PROTOC -I=defs --go_opt=paths=source_relative --go_out=build/go defs/*/*.proto
-$GIT tag build/go/$VERSION
-$GIT push origin build/go/$VERSION
+$PROTOC -I=SRC_DIR --go_opt=paths=source_relative --go_out=$DST_DIR/go SRC_DIR/*/*.proto
+$GIT tag $DST_DIR/go/$VERSION
+$GIT push origin $DST_DIR/go/$VERSION
