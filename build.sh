@@ -31,6 +31,7 @@ $PROTOC -I=$SRC_DIR --go_opt=paths=source_relative --go_out=$DST_DIR/go $SRC_DIR
 # Bump versions
 $BUMP2VERSION --current-version $CURRENT_VERSION --new-version $NEW_VERSION patch $DST_DIR/python/setup.py
 ( cd $DST_DIR/js && $NPM version $NEW_VERSION )
+$GIT add $DST_DIR/*
 $GIT commit -m "Bump version: ${CURRENT_VERSION} to ${NEW_VERSION}"
 
 # Tag using language-specific packaging syntax
@@ -38,5 +39,5 @@ $GIT tag $NEW_VERSION
 $GIT tag $DST_DIR/go/$NEW_VERSION
 
 # Publish everything
-$GIT git push && $GIT push --tags
+$GIT push && $GIT push --tags
 ( cd $DST_DIR/js && $GITPKG publish )
