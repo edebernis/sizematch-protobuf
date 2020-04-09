@@ -1142,7 +1142,7 @@ proto.sizematch.protobuf.items.Dimension.prototype.toObject = function(opt_inclu
 proto.sizematch.protobuf.items.Dimension.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    value: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    value: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
     unit: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
@@ -1185,7 +1185,7 @@ proto.sizematch.protobuf.items.Dimension.deserializeBinaryFromReader = function(
       msg.setName(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setValue(value);
       break;
     case 3:
@@ -1229,8 +1229,8 @@ proto.sizematch.protobuf.items.Dimension.serializeBinaryToWriter = function(mess
     );
   }
   f = message.getValue();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (f !== 0.0) {
+    writer.writeDouble(
       2,
       f
     );
@@ -1285,11 +1285,11 @@ proto.sizematch.protobuf.items.Dimension.prototype.setName = function(value) {
 
 
 /**
- * optional uint64 value = 2;
+ * optional double value = 2;
  * @return {number}
  */
 proto.sizematch.protobuf.items.Dimension.prototype.getValue = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 2, 0.0));
 };
 
 
@@ -1298,7 +1298,7 @@ proto.sizematch.protobuf.items.Dimension.prototype.getValue = function() {
  * @return {!proto.sizematch.protobuf.items.Dimension} returns this
  */
 proto.sizematch.protobuf.items.Dimension.prototype.setValue = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
+  return jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 
@@ -1352,7 +1352,7 @@ proto.sizematch.protobuf.items.Price.prototype.toObject = function(opt_includeIn
  */
 proto.sizematch.protobuf.items.Price.toObject = function(includeInstance, msg) {
   var f, obj = {
-    price: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    price: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     currency: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
@@ -1391,7 +1391,7 @@ proto.sizematch.protobuf.items.Price.deserializeBinaryFromReader = function(msg,
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setPrice(value);
       break;
     case 2:
@@ -1428,8 +1428,8 @@ proto.sizematch.protobuf.items.Price.prototype.serializeBinary = function() {
 proto.sizematch.protobuf.items.Price.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPrice();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (f !== 0.0) {
+    writer.writeDouble(
       1,
       f
     );
@@ -1453,11 +1453,11 @@ proto.sizematch.protobuf.items.Price.Currency = {
 };
 
 /**
- * optional uint64 price = 1;
+ * optional double price = 1;
  * @return {number}
  */
 proto.sizematch.protobuf.items.Price.prototype.getPrice = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 1, 0.0));
 };
 
 
@@ -1466,7 +1466,7 @@ proto.sizematch.protobuf.items.Price.prototype.getPrice = function() {
  * @return {!proto.sizematch.protobuf.items.Price} returns this
  */
 proto.sizematch.protobuf.items.Price.prototype.setPrice = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  return jspb.Message.setProto3FloatField(this, 1, value);
 };
 
 
