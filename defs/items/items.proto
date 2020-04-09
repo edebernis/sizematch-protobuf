@@ -46,7 +46,7 @@ message Dimension {
     WEIGHT = 3;
   }
   Name name = 1;
-  uint64 value = 2;
+  double value = 2;
   enum Unit {
     MM = 0;
     CM = 1;
@@ -59,7 +59,7 @@ message Dimension {
 
 
 message Price {
-  uint64 price = 1;
+  double price = 1;
   enum Currency {
     EUR = 0;
     GBP = 1;
