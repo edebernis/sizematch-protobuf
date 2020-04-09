@@ -19,7 +19,7 @@ message Item {
   repeated string categories = 7;
   repeated string image_urls = 8;
   map<string, string> dimensions = 9;
-  uint64 price = 10;
+  double price = 10;
   string price_currency = 11;
 }
 
