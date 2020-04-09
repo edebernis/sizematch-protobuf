@@ -29,7 +29,7 @@ $PROTOC -I=$SRC_DIR --js_out=import_style=commonjs,binary:$DST_DIR/js $SRC_DIR/*
 $PROTOC -I=$SRC_DIR --go_opt=paths=source_relative --go_out=$DST_DIR/go $SRC_DIR/*/*.proto
 
 # Bump versions
-$BUMP2VERSION --current-version $CURRENT_VERSION --new-version $NEW_VERSION patch $DST_DIR/python/setup.py
+$BUMP2VERSION --allow-dirty --current-version $CURRENT_VERSION --new-version $NEW_VERSION patch $DST_DIR/python/setup.py
 ( cd $DST_DIR/js && $NPM version $NEW_VERSION )
 $GIT add $DST_DIR/*
 $GIT commit -m "Bump version: ${CURRENT_VERSION} to ${NEW_VERSION}"
