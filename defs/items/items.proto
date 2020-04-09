@@ -4,6 +4,10 @@ package sizematch.protobuf.items;
 
 option go_package = "items";
 
+enum Lang {
+    EN = 0;
+    FR = 1;
+  }
 
 message Item {
   string id = 1;
@@ -23,25 +27,34 @@ message Item {
 message NormalizedItem {
   string id = 1;
   string source = 2;
-  enum Lang {
-    EN = 0;
-    FR = 1;
-  }
   Lang lang = 3;
   repeated string urls = 4;
   string name = 5;
   string description = 6;
   repeated string categories = 7;
   repeated string image_urls = 8;
-  Dimensions dimensions = 9;
+  repeated Dimension dimensions = 9;
   Price price = 10;
 }
 
 
-message Dimensions {
-  uint64 height = 1;
-  uint64 width = 2;
-  uint64 depth = 3;
+message Dimension {
+  enum Name {
+    HEIGHT = 0;
+    WIDTH  = 1;
+    DEPTH  = 2;
+    WEIGHT = 3;
+  }
+  Name name = 1;
+  uint64 value = 2;
+  enum Unit {
+    MM = 0;
+    CM = 1;
+    M  = 2;
+    G  = 3;
+    KG = 4;
+  }
+  Unit unit = 3;
 }
 
 
