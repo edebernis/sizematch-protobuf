@@ -152,7 +152,7 @@ proto.sizematch.protobuf.items.Item.toObject = function(includeInstance, msg) {
     categoriesList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
     imageUrlsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
     dimensionsMap: (f = msg.getDimensionsMap()) ? f.toObject(includeInstance, undefined) : [],
-    price: jspb.Message.getFieldWithDefault(msg, 10, 0),
+    price: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
     priceCurrency: jspb.Message.getFieldWithDefault(msg, 11, "")
   };
 
@@ -229,7 +229,7 @@ proto.sizematch.protobuf.items.Item.deserializeBinaryFromReader = function(msg, 
          });
       break;
     case 10:
-      var value = /** @type {number} */ (reader.readUint64());
+      var value = /** @type {number} */ (reader.readDouble());
       msg.setPrice(value);
       break;
     case 11:
@@ -326,8 +326,8 @@ proto.sizematch.protobuf.items.Item.serializeBinaryToWriter = function(message, 
     f.serializeBinary(9, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
   f = message.getPrice();
-  if (f !== 0) {
-    writer.writeUint64(
+  if (f !== 0.0) {
+    writer.writeDouble(
       10,
       f
     );
@@ -566,11 +566,11 @@ proto.sizematch.protobuf.items.Item.prototype.clearDimensionsMap = function() {
 
 
 /**
- * optional uint64 price = 10;
+ * optional double price = 10;
  * @return {number}
  */
 proto.sizematch.protobuf.items.Item.prototype.getPrice = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 10, 0));
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
 };
 
 
@@ -579,7 +579,7 @@ proto.sizematch.protobuf.items.Item.prototype.getPrice = function() {
  * @return {!proto.sizematch.protobuf.items.Item} returns this
  */
 proto.sizematch.protobuf.items.Item.prototype.setPrice = function(value) {
-  return jspb.Message.setProto3IntField(this, 10, value);
+  return jspb.Message.setProto3FloatField(this, 10, value);
 };
 
 
