@@ -145,7 +145,7 @@ proto.sizematch.protobuf.items.Item.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     source: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    lang: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    lang: jspb.Message.getFieldWithDefault(msg, 3, 0),
     urlsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
     name: jspb.Message.getFieldWithDefault(msg, 5, ""),
     description: jspb.Message.getFieldWithDefault(msg, 6, ""),
@@ -199,7 +199,7 @@ proto.sizematch.protobuf.items.Item.deserializeBinaryFromReader = function(msg, 
       msg.setSource(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {!proto.sizematch.protobuf.items.Lang} */ (reader.readEnum());
       msg.setLang(value);
       break;
     case 4:
@@ -280,8 +280,8 @@ proto.sizematch.protobuf.items.Item.serializeBinaryToWriter = function(message, 
     );
   }
   f = message.getLang();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0.0) {
+    writer.writeEnum(
       3,
       f
     );
@@ -379,20 +379,20 @@ proto.sizematch.protobuf.items.Item.prototype.setSource = function(value) {
 
 
 /**
- * optional string lang = 3;
- * @return {string}
+ * optional Lang lang = 3;
+ * @return {!proto.sizematch.protobuf.items.Lang}
  */
 proto.sizematch.protobuf.items.Item.prototype.getLang = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {!proto.sizematch.protobuf.items.Lang} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
- * @param {string} value
+ * @param {!proto.sizematch.protobuf.items.Lang} value
  * @return {!proto.sizematch.protobuf.items.Item} returns this
  */
 proto.sizematch.protobuf.items.Item.prototype.setLang = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3EnumField(this, 3, value);
 };
 
 
