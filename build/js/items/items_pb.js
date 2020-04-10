@@ -1273,7 +1273,8 @@ proto.sizematch.protobuf.items.Dimension.Unit = {
   M2: 7,
   MM3: 8,
   CM3: 9,
-  M3: 10
+  M3: 10,
+  L: 11
 };
 
 /**
