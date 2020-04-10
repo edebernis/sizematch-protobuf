@@ -59,7 +59,7 @@ message Dimension {
 
 
 message Price {
-  double price = 1;
+  double amount = 1;
   enum Currency {
     EUR = 0;
     GBP = 1;
