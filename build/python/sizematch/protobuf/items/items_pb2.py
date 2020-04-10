@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sizematch.protobuf.items',
   syntax='proto3',
   serialized_options=b'Z\005items',
-  serialized_pb=b'\n\x11items/items.proto\x12\x18sizematch.protobuf.items\"\xc7\x02\n\x04Item\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12,\n\x04lang\x18\x03 \x01(\x0e\x32\x1e.sizematch.protobuf.items.Lang\x12\x0c\n\x04urls\x18\x04 \x03(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\ncategories\x18\x07 \x03(\t\x12\x12\n\nimage_urls\x18\x08 \x03(\t\x12\x42\n\ndimensions\x18\t \x03(\x0b\x32..sizematch.protobuf.items.Item.DimensionsEntry\x12\r\n\x05price\x18\n \x01(\x01\x12\x16\n\x0eprice_currency\x18\x0b \x01(\t\x1a\x31\n\x0f\x44imensionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x9c\x02\n\x0eNormalizedItem\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12,\n\x04lang\x18\x03 \x01(\x0e\x32\x1e.sizematch.protobuf.items.Lang\x12\x0c\n\x04urls\x18\x04 \x03(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\ncategories\x18\x07 \x03(\t\x12\x12\n\nimage_urls\x18\x08 \x03(\t\x12\x37\n\ndimensions\x18\t \x03(\x0b\x32#.sizematch.protobuf.items.Dimension\x12.\n\x05price\x18\n \x01(\x0b\x32\x1f.sizematch.protobuf.items.Price\"\xee\x01\n\tDimension\x12\x36\n\x04name\x18\x01 \x01(\x0e\x32(.sizematch.protobuf.items.Dimension.Name\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x36\n\x04unit\x18\x03 \x01(\x0e\x32(.sizematch.protobuf.items.Dimension.Unit\"4\n\x04Name\x12\n\n\x06HEIGHT\x10\x00\x12\t\n\x05WIDTH\x10\x01\x12\t\n\x05\x44\x45PTH\x10\x02\x12\n\n\x06WEIGHT\x10\x03\",\n\x04Unit\x12\x06\n\x02MM\x10\x00\x12\x06\n\x02\x43M\x10\x01\x12\x05\n\x01M\x10\x02\x12\x05\n\x01G\x10\x03\x12\x06\n\x02KG\x10\x04\"q\n\x05Price\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x01\x12:\n\x08\x63urrency\x18\x02 \x01(\x0e\x32(.sizematch.protobuf.items.Price.Currency\"\x1c\n\x08\x43urrency\x12\x07\n\x03\x45UR\x10\x00\x12\x07\n\x03GBP\x10\x01*\x16\n\x04Lang\x12\x06\n\x02\x45N\x10\x00\x12\x06\n\x02\x46R\x10\x01\x42\x07Z\x05itemsb\x06proto3'
+  serialized_pb=b'\n\x11items/items.proto\x12\x18sizematch.protobuf.items\"\xc7\x02\n\x04Item\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12,\n\x04lang\x18\x03 \x01(\x0e\x32\x1e.sizematch.protobuf.items.Lang\x12\x0c\n\x04urls\x18\x04 \x03(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\ncategories\x18\x07 \x03(\t\x12\x12\n\nimage_urls\x18\x08 \x03(\t\x12\x42\n\ndimensions\x18\t \x03(\x0b\x32..sizematch.protobuf.items.Item.DimensionsEntry\x12\r\n\x05price\x18\n \x01(\x01\x12\x16\n\x0eprice_currency\x18\x0b \x01(\t\x1a\x31\n\x0f\x44imensionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x9c\x02\n\x0eNormalizedItem\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12,\n\x04lang\x18\x03 \x01(\x0e\x32\x1e.sizematch.protobuf.items.Lang\x12\x0c\n\x04urls\x18\x04 \x03(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\ncategories\x18\x07 \x03(\t\x12\x12\n\nimage_urls\x18\x08 \x03(\t\x12\x37\n\ndimensions\x18\t \x03(\x0b\x32#.sizematch.protobuf.items.Dimension\x12.\n\x05price\x18\n \x01(\x0b\x32\x1f.sizematch.protobuf.items.Price\"\xd7\x02\n\tDimension\x12\x36\n\x04name\x18\x01 \x01(\x0e\x32(.sizematch.protobuf.items.Dimension.Name\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x36\n\x04unit\x18\x03 \x01(\x0e\x32(.sizematch.protobuf.items.Dimension.Unit\"i\n\x04Name\x12\n\n\x06HEIGHT\x10\x00\x12\t\n\x05WIDTH\x10\x01\x12\t\n\x05\x44\x45PTH\x10\x02\x12\n\n\x06WEIGHT\x10\x03\x12\n\n\x06LENGTH\x10\x04\x12\x0c\n\x08\x44IAMETER\x10\x05\x12\n\n\x06VOLUME\x10\x06\x12\r\n\tTHICKNESS\x10\x07\"`\n\x04Unit\x12\x06\n\x02MM\x10\x00\x12\x06\n\x02\x43M\x10\x01\x12\x05\n\x01M\x10\x02\x12\x05\n\x01G\x10\x03\x12\x06\n\x02KG\x10\x04\x12\x07\n\x03MM2\x10\x05\x12\x07\n\x03\x43M2\x10\x06\x12\x06\n\x02M2\x10\x07\x12\x07\n\x03MM3\x10\x08\x12\x07\n\x03\x43M3\x10\t\x12\x06\n\x02M3\x10\n\"q\n\x05Price\x12\x0e\n\x06\x61mount\x18\x01 \x01(\x01\x12:\n\x08\x63urrency\x18\x02 \x01(\x0e\x32(.sizematch.protobuf.items.Price.Currency\"\x1c\n\x08\x43urrency\x12\x07\n\x03\x45UR\x10\x00\x12\x07\n\x03GBP\x10\x01*\x16\n\x04Lang\x12\x06\n\x02\x45N\x10\x00\x12\x06\n\x02\x46R\x10\x01\x42\x07Z\x05itemsb\x06proto3'
 )
 
 _LANG = _descriptor.EnumDescriptor(
@@ -39,8 +39,8 @@ _LANG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1020,
-  serialized_end=1042,
+  serialized_start=1125,
+  serialized_end=1147,
 )
 _sym_db.RegisterEnumDescriptor(_LANG)
 
@@ -71,11 +71,27 @@ _DIMENSION_NAME = _descriptor.EnumDescriptor(
       name='WEIGHT', index=3, number=3,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LENGTH', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DIAMETER', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VOLUME', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='THICKNESS', index=7, number=7,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=805,
-  serialized_end=857,
+  serialized_end=910,
 )
 _sym_db.RegisterEnumDescriptor(_DIMENSION_NAME)
 
@@ -105,11 +121,35 @@ _DIMENSION_UNIT = _descriptor.EnumDescriptor(
       name='KG', index=4, number=4,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MM2', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CM2', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='M2', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MM3', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CM3', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='M3', index=10, number=10,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=859,
-  serialized_end=903,
+  serialized_start=912,
+  serialized_end=1008,
 )
 _sym_db.RegisterEnumDescriptor(_DIMENSION_UNIT)
 
@@ -130,8 +170,8 @@ _PRICE_CURRENCY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=990,
-  serialized_end=1018,
+  serialized_start=1095,
+  serialized_end=1123,
 )
 _sym_db.RegisterEnumDescriptor(_PRICE_CURRENCY)
 
@@ -411,7 +451,7 @@ _DIMENSION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=665,
-  serialized_end=903,
+  serialized_end=1008,
 )
 
 
@@ -449,8 +489,8 @@ _PRICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=905,
-  serialized_end=1018,
+  serialized_start=1010,
+  serialized_end=1123,
 )
 
 _ITEM_DIMENSIONSENTRY.containing_type = _ITEM

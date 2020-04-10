@@ -1252,7 +1252,11 @@ proto.sizematch.protobuf.items.Dimension.Name = {
   HEIGHT: 0,
   WIDTH: 1,
   DEPTH: 2,
-  WEIGHT: 3
+  WEIGHT: 3,
+  LENGTH: 4,
+  DIAMETER: 5,
+  VOLUME: 6,
+  THICKNESS: 7
 };
 
 /**
@@ -1263,7 +1267,13 @@ proto.sizematch.protobuf.items.Dimension.Unit = {
   CM: 1,
   M: 2,
   G: 3,
-  KG: 4
+  KG: 4,
+  MM2: 5,
+  CM2: 6,
+  M2: 7,
+  MM3: 8,
+  CM3: 9,
+  M3: 10
 };
 
 /**
