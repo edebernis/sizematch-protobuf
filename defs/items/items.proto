@@ -12,7 +12,7 @@ enum Lang {
 message Item {
   string id = 1;
   string source = 2;
-  string lang = 3;
+  Lang lang = 3;
   repeated string urls = 4;
   string name = 5;
   string description = 6;
