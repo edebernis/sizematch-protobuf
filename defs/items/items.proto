@@ -64,6 +64,8 @@ message Dimension {
     CM3 = 9;
     M3 = 10;
     L = 11;
+    CL = 12;
+    ML = 13;
   }
   Unit unit = 3;
 }
