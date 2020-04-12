@@ -1,4 +1,4 @@
-module github.com/edebernis/sizematch-protobuf/build/go
+module github.com/edebernis/sizematch-protobuf/go
 
 go 1.13
 
