@@ -153,7 +153,8 @@ proto.sizematch.protobuf.items.Item.toObject = function(includeInstance, msg) {
     imageUrlsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
     dimensionsMap: (f = msg.getDimensionsMap()) ? f.toObject(includeInstance, undefined) : [],
     price: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
-    priceCurrency: jspb.Message.getFieldWithDefault(msg, 11, "")
+    priceCurrency: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    brand: jspb.Message.getFieldWithDefault(msg, 12, "")
   };
 
   if (includeInstance) {
@@ -235,6 +236,10 @@ proto.sizematch.protobuf.items.Item.deserializeBinaryFromReader = function(msg, 
     case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.setPriceCurrency(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBrand(value);
       break;
     default:
       reader.skipField();
@@ -336,6 +341,13 @@ proto.sizematch.protobuf.items.Item.serializeBinaryToWriter = function(message, 
   if (f.length > 0) {
     writer.writeString(
       11,
+      f
+    );
+  }
+  f = message.getBrand();
+  if (f.length > 0) {
+    writer.writeString(
+      12,
       f
     );
   }
@@ -601,6 +613,24 @@ proto.sizematch.protobuf.items.Item.prototype.setPriceCurrency = function(value)
 };
 
 
+/**
+ * optional string brand = 12;
+ * @return {string}
+ */
+proto.sizematch.protobuf.items.Item.prototype.getBrand = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.sizematch.protobuf.items.Item} returns this
+ */
+proto.sizematch.protobuf.items.Item.prototype.setBrand = function(value) {
+  return jspb.Message.setProto3StringField(this, 12, value);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
@@ -650,7 +680,8 @@ proto.sizematch.protobuf.items.NormalizedItem.toObject = function(includeInstanc
     imageUrlsList: (f = jspb.Message.getRepeatedField(msg, 8)) == null ? undefined : f,
     dimensionsList: jspb.Message.toObjectList(msg.getDimensionsList(),
     proto.sizematch.protobuf.items.Dimension.toObject, includeInstance),
-    price: (f = msg.getPrice()) && proto.sizematch.protobuf.items.Price.toObject(includeInstance, f)
+    price: (f = msg.getPrice()) && proto.sizematch.protobuf.items.Price.toObject(includeInstance, f),
+    brand: jspb.Message.getFieldWithDefault(msg, 11, "")
   };
 
   if (includeInstance) {
@@ -728,6 +759,10 @@ proto.sizematch.protobuf.items.NormalizedItem.deserializeBinaryFromReader = func
       var value = new proto.sizematch.protobuf.items.Price;
       reader.readMessage(value,proto.sizematch.protobuf.items.Price.deserializeBinaryFromReader);
       msg.setPrice(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBrand(value);
       break;
     default:
       reader.skipField();
@@ -828,6 +863,13 @@ proto.sizematch.protobuf.items.NormalizedItem.serializeBinaryToWriter = function
       10,
       f,
       proto.sizematch.protobuf.items.Price.serializeBinaryToWriter
+    );
+  }
+  f = message.getBrand();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
+      f
     );
   }
 };
@@ -1106,6 +1148,24 @@ proto.sizematch.protobuf.items.NormalizedItem.prototype.clearPrice = function() 
  */
 proto.sizematch.protobuf.items.NormalizedItem.prototype.hasPrice = function() {
   return jspb.Message.getField(this, 10) != null;
+};
+
+
+/**
+ * optional string brand = 11;
+ * @return {string}
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.getBrand = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.sizematch.protobuf.items.NormalizedItem} returns this
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.setBrand = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 

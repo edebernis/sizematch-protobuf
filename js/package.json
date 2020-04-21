@@ -1,6 +1,6 @@
 {
     "name": "sizematch-protobuf-js",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "description": "Sizematch protobuf JS libraries",
     "author": "Emeric de Bernis <emeric.debernis@gmail.com>",
     "private": true,
