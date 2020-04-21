@@ -21,6 +21,7 @@ message Item {
   map<string, string> dimensions = 9;
   double price = 10;
   string price_currency = 11;
+  string brand = 12;
 }
 
 
@@ -35,6 +36,7 @@ message NormalizedItem {
   repeated string image_urls = 8;
   repeated Dimension dimensions = 9;
   Price price = 10;
+  string brand = 11;
 }
 
 
