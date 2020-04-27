@@ -1,0 +1,13 @@
+{
+    "name": "sizematch-protobuf-js",
+    "version": "0.0.13",
+    "description": "Sizematch protobuf JS libraries",
+    "author": "Emeric de Bernis <emeric.debernis@gmail.com>",
+    "private": true,
+    "gitpkg": {
+        "registry": "git@github.com:edebernis/sizematch-protobuf.git"
+    },
+    "dependencies": {
+        "google-protobuf": "^3.11.4"
+    }
+}
