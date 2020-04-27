@@ -110,7 +110,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.sizematch.protobuf.items.Item.repeatedFields_ = [4,7,8];
+proto.sizematch.protobuf.items.Item.repeatedFields_ = [4,7,8,13];
 
 
 
@@ -154,7 +154,8 @@ proto.sizematch.protobuf.items.Item.toObject = function(includeInstance, msg) {
     dimensionsMap: (f = msg.getDimensionsMap()) ? f.toObject(includeInstance, undefined) : [],
     price: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0),
     priceCurrency: jspb.Message.getFieldWithDefault(msg, 11, ""),
-    brand: jspb.Message.getFieldWithDefault(msg, 12, "")
+    brand: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    colorsList: (f = jspb.Message.getRepeatedField(msg, 13)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -240,6 +241,10 @@ proto.sizematch.protobuf.items.Item.deserializeBinaryFromReader = function(msg, 
     case 12:
       var value = /** @type {string} */ (reader.readString());
       msg.setBrand(value);
+      break;
+    case 13:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addColors(value);
       break;
     default:
       reader.skipField();
@@ -348,6 +353,13 @@ proto.sizematch.protobuf.items.Item.serializeBinaryToWriter = function(message, 
   if (f.length > 0) {
     writer.writeString(
       12,
+      f
+    );
+  }
+  f = message.getColorsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      13,
       f
     );
   }
@@ -631,13 +643,50 @@ proto.sizematch.protobuf.items.Item.prototype.setBrand = function(value) {
 };
 
 
+/**
+ * repeated string colors = 13;
+ * @return {!Array<string>}
+ */
+proto.sizematch.protobuf.items.Item.prototype.getColorsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 13));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.sizematch.protobuf.items.Item} returns this
+ */
+proto.sizematch.protobuf.items.Item.prototype.setColorsList = function(value) {
+  return jspb.Message.setField(this, 13, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.sizematch.protobuf.items.Item} returns this
+ */
+proto.sizematch.protobuf.items.Item.prototype.addColors = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 13, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.sizematch.protobuf.items.Item} returns this
+ */
+proto.sizematch.protobuf.items.Item.prototype.clearColorsList = function() {
+  return this.setColorsList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.sizematch.protobuf.items.NormalizedItem.repeatedFields_ = [4,7,8,9];
+proto.sizematch.protobuf.items.NormalizedItem.repeatedFields_ = [4,7,8,9,12];
 
 
 
@@ -681,7 +730,8 @@ proto.sizematch.protobuf.items.NormalizedItem.toObject = function(includeInstanc
     dimensionsList: jspb.Message.toObjectList(msg.getDimensionsList(),
     proto.sizematch.protobuf.items.Dimension.toObject, includeInstance),
     price: (f = msg.getPrice()) && proto.sizematch.protobuf.items.Price.toObject(includeInstance, f),
-    brand: jspb.Message.getFieldWithDefault(msg, 11, "")
+    brand: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    colorsList: (f = jspb.Message.getRepeatedField(msg, 12)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -763,6 +813,10 @@ proto.sizematch.protobuf.items.NormalizedItem.deserializeBinaryFromReader = func
     case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.setBrand(value);
+      break;
+    case 12:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addColors(value);
       break;
     default:
       reader.skipField();
@@ -869,6 +923,13 @@ proto.sizematch.protobuf.items.NormalizedItem.serializeBinaryToWriter = function
   if (f.length > 0) {
     writer.writeString(
       11,
+      f
+    );
+  }
+  f = message.getColorsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      12,
       f
     );
   }
@@ -1166,6 +1227,43 @@ proto.sizematch.protobuf.items.NormalizedItem.prototype.getBrand = function() {
  */
 proto.sizematch.protobuf.items.NormalizedItem.prototype.setBrand = function(value) {
   return jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * repeated string colors = 12;
+ * @return {!Array<string>}
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.getColorsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 12));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.sizematch.protobuf.items.NormalizedItem} returns this
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.setColorsList = function(value) {
+  return jspb.Message.setField(this, 12, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.sizematch.protobuf.items.NormalizedItem} returns this
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.addColors = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 12, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.sizematch.protobuf.items.NormalizedItem} returns this
+ */
+proto.sizematch.protobuf.items.NormalizedItem.prototype.clearColorsList = function() {
+  return this.setColorsList([]);
 };
 
 
