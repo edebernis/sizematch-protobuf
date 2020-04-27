@@ -22,6 +22,7 @@ message Item {
   double price = 10;
   string price_currency = 11;
   string brand = 12;
+  repeated string colors = 13;
 }
 
 
@@ -37,6 +38,7 @@ message NormalizedItem {
   repeated Dimension dimensions = 9;
   Price price = 10;
   string brand = 11;
+  repeated string colors = 12;
 }
 
 
